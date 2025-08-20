@@ -1,1 +1,84 @@
 /* You can add global styles to this file, and also import other style files */
+.container {
+    display: flex;
+    align-items: center;
+    width: 1000px;
+    background-color: #333;
+    color: #fff;
+    &Wrap {
+        padding: 0 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &-left,
+    &-right {
+        width: 50%;
+        flex: 0 0 50%;
+        padding: 1rem;
+    }
+    &-left {
+        border-right: 1px solid #fff;
+    }
+}
+
+.ai-review {
+    &__title {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    &__container {
+        background-color: #5e5c5c;
+        border-radius: 4px;
+        padding: 16px;
+    }
+    &__item {
+        display: grid;
+        gap: 16px;
+        &-title {
+            font-size: 16px;
+        }
+    }
+    &__content {
+        border-radius: 4px;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        &.-high {
+            background: #e04242;
+            & .ai-review__chip {
+                background: #a52c2c;
+            }
+        }
+        &.-medium {
+            background: #e0a142;
+            & .ai-review__chip {
+                background: #a57f2c;
+            }
+        }
+        &.-low {
+            background: #97e974;
+            & .ai-review__chip {
+                background: #38a52c;
+            }
+        }
+    }
+    &__data {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+    &__chip {
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        border-radius: 8px;
+    }
+    &__code {
+        padding: 8px;
+        background-color: #753030;
+    }
+}
